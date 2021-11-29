@@ -37,5 +37,5 @@ RUN pip install --upgrade pip \
 COPY --from=build /workdir/target/release/build/tensorflow-sys-43013d59429991b7/out/libtensorflow.so.2 ./target/release/
 COPY --from=build /workdir/target/release/build/tensorflow-sys-43013d59429991b7/out/libtensorflow_framework.so.2 ./target/release/
 COPY --from=build /workdir/target/release/pyo3tensorflow ./target/release/
-ENV LD_LIBRARY_PATH=/working/target/release
+ENV LD_LIBRARY_PATH=/workdir/target/release
 CMD ["/bin/bash"]
